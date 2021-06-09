@@ -1,1 +1,77 @@
-/*Maak hier jouw CSS!*/
+.container {
+    background-color: rgba(222, 184, 135, 0.8);
+    color: white;
+    padding: 16px;
+    text-align: center;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 240px 100px auto 50px;
+    grid-gap: 16px;
+    grid-template-areas:
+    "a c c"
+    "b c c"
+    "b e d"
+    "b e ."
+    "f f f"
+;
+}
+
+#item-1 {
+    background-color: brown;
+    grid-area: a;
+}
+
+#item-2 {
+    background-color: brown;
+    text-align: left;
+    padding: 16px;
+    grid-area: b;
+}
+
+#item-3 {
+    background-color: brown;
+    grid-area: c;
+}
+
+#item-4 {
+    background-color: brown;
+    grid-area: d;
+}
+
+#item-5 {
+    background-color: brown;
+    grid-area: e;
+}
+
+#item-6 {
+    background-color: brown ;
+    grid-area: f;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        /*background-color: rgba(222, 184, 135, 0.8);*/
+        /*color: white;*/
+        /*padding: 16px;*/
+        /*text-align: center;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+
+        /*display: grid;*/
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+        grid-gap: 16px;
+        grid-template-areas:
+         "a"
+         "b"
+         "c"
+         "d"
+         "e"
+         "."
+         "f"
+    ;
+    }
+}
